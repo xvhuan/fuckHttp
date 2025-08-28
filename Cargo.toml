@@ -1,0 +1,51 @@
+[package]
+name = "fuckHttp"
+version = "0.1.0"
+edition = "2021"
+authors = ["ius <ius@qaq.al>"]
+description = "A browser selector for intercepted URLs"
+license = "MIT"
+repository = "https://github.com/xvhuan/fuckHttp"
+keywords = ["browser", "url", "selector", "windows"]
+categories = ["command-line-utilities"]
+readme = "README.md"
+
+[[bin]]
+name = "fuckHttp"
+path = "src/main.rs"
+
+[dependencies]
+dark-light = "1.0"
+eframe = "0.27.2"
+image = { version = "0.25.1", features = ["ico"] }
+is_elevated = "0.1.2"
+regex = "1.10"
+reqwest = { version = "0.11", features = ["blocking"] }
+runas = "0.2.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["rt"] }
+url = "2.5"
+urlencoding = "2.1"
+winreg = "0.52.0"
+windows-sys = { version = "0.52.0", features = ["Win32_UI_WindowsAndMessaging", "Win32_System_Console", "Win32_Foundation"] }
+
+[build-dependencies]
+winres = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[package.metadata.winres]
+OriginalFilename = "fuckHttp.exe"
+LegalCopyright = "Copyright (c) 2024"
+ProductName = "fuckHttp Browser Selector"
+FileDescription = "Browser selector for intercepted URLs"
+CompanyName = "Your Company"
+ProductVersion = "0.1.0"
+FileVersion = "0.1.0"
+icon = "icon.ico"
