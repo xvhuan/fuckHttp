@@ -1,6 +1,8 @@
-# fuckHttp 浏览器选择器
+<img width="1370" height="84" alt="image" src="https://github.com/user-attachments/assets/63fa4b0b-f9ab-4578-a5fb-5ae78288c093" /># fuckHttp 浏览器选择器
 
 一个Windows应用程序，用于拦截URL重定向并允许用户选择使用哪个浏览器打开链接。
+
+故事背景：https://linux.do/t/topic/914393
 
 ## 功能特性
 
